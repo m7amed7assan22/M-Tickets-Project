@@ -1,0 +1,258 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #111; /* خلفية داكنة */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* الصفحة الرئيسية */
+.title {
+  text-align: center;
+  margin: 40px 0;
+  color: #89409a;
+  font-size: 2.5em;
+}
+
+.events-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 20px 60px;
+}
+
+.event {
+  display: flex;
+  align-items: center;
+  background: #1b1b1b;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.05);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.event:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px #89409a;
+}
+
+.event img {
+  width: 45%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px 0 0 15px;
+}
+
+.event-content {
+  padding: 20px 10px;
+  width: 30%;
+}
+
+.event-content h3 {
+  margin: 0 0 10px;
+  color:#89409a;
+  font-size: 1.5em;
+}
+
+.event-content p {
+  color: #ddd;
+  line-height: 1.6;
+}
+.buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  background: #89409a;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px rgba(113, 80, 120, 0.5);
+}
+
+.btn:hover {
+  background: #a85cc0;
+  box-shadow: 0 0 15px rgba(137, 64, 154, 0.9);
+  transform: translateY(-3px);
+}
+/* البلور لما أقف على كارت */
+.blurred {
+  filter: blur(4px);
+  opacity: 0.5;
+  transform: scale(0.97);
+  transition: all 0.3s ease;
+}
+/* صفحة التفاصيل */
+.banner {
+  width: 90%;
+  height: auto;
+}
+
+.info {
+  padding: 20px;
+  color: #fbfbfb;
+}
+
+.btn {
+  background-color: #a85cc0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #711b73;
+}
+
+.cancel {
+  background-color: #999;
+}
+
+.cancel:hover {
+  background-color: #555;
+}
+
+/* modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  width: 350px;
+}
+
+.modal-buttons {
+  margin-top: 15px;
+}
+
+/* الدفع */
+.payment {
+  background: #e1dede;
+  width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.payment input {
+  width: 90%;
+  margin: 8px 0;
+  padding: 10px;
+  border: 1px solid #a79e9e;
+  border-radius: 8px;
+}
+.btn.pay {
+  background-color: #636163;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.btn.pay:hover {
+  background-color: #7c6e7c;
+}
+
+/* 🌐 تصميم متجاوب للموبايل */
+@media (max-width: 480px) {
+
+  .title {
+    font-size: 1.8em;
+    margin: 25px 0;
+  }
+
+  .events-container {
+    padding: 10px;
+  }
+
+  .event {
+    flex-direction: column;
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 18px;
+  }
+
+  .event img {
+    width: 100%;
+    height: 270px;
+    border-radius: 18px 18px 0 0;
+    object-fit: cover;
+  }
+
+  .event-content {
+    width: 100%;
+    padding: 20px 15px 25px;
+    text-align: center;
+  }
+
+  .event-content h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+  }
+
+  .event-content p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .btn {
+    width: 90%;
+    font-size: 1em;
+    padding: 12px;
+  }
+
+  /* المودال */
+  .modal-content {
+    width: 90%;
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  /* صفحة الدفع */
+  .payment {
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+  }
+
+  .payment input {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .btn.pay {
+    width: 100%;
+    font-size: 17px;
+  }
+}
