@@ -5,7 +5,7 @@
     font-size: 14px;
  }
  body{
-    background-color: #eeeeee;
+    background-color: #181818;
  }
  nav{
     width: 100%;
@@ -152,6 +152,7 @@ pre{
     left: 200px;
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
 }
 b{
    font-size: 30px;
