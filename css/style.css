@@ -1,0 +1,400 @@
+*{
+    padding: 0;
+    margin: 0;
+ }
+body{
+    background-image: url('../images/back.png');
+    background-repeat: no-repeat;      
+    background-size: cover;            
+    background-position: center;       
+    background-attachment: fixed;
+}
+nav{
+    width: 100%;
+    height: 65px;
+ }
+.logo-menu{
+    position: absolute;
+    top: 20px;
+    left: 200px;
+}
+.logo-menu img{
+    position: absolute;
+    height: 50px;
+    width: 60px;
+    top: -7px;
+    left: 35px;
+}
+.side-nav{
+    height: 100%;
+    width: 290px;
+    position: fixed;
+    background-color: #000;
+    transition: 0.4s ease;
+    transform: translateX(-290px);
+    z-index: 1;
+}
+ul{
+    margin: 70% 25px;
+}
+ul hr{
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, .25);
+}
+ul li{
+    list-style: none;
+}
+ul li a{
+    color: #fff;
+    padding: 17px 0;
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+}
+ul li:hover a{
+    transform:translateX(15px);
+}
+nav input{
+    display: none;
+    visibility: hidden;
+}
+.toggle{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    z-index: 2;
+    cursor: pointer;
+}
+.toggle .common{
+    position: absolute;
+    background-color: #fff;
+    border: 50px;
+    transition: 0.4s ease;
+}
+.toggle .top_line{
+    height: 2px;
+    width: 17px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.toggle .mid_line{
+    height: 2px;
+    width: 17px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.toggle .bot_line{
+    height: 1px;
+    width: 10px;
+    top: 70%;
+    left: 39%;
+    transform: translate(-50%,-50%);
+}
+nav input:checked ~ .logo-menu .toggle{
+    position: fixed;
+}
+nav input:checked ~ .logo-menu .toggle .top_line{
+    left: 170%;
+    top: 50%;
+    width: 15px;
+    transform: rotate(45deg);
+}
+nav input:checked ~ .logo-menu .toggle .mid_line{
+    transform: translateX(-290px);
+}
+nav input:checked ~ .logo-menu .toggle .bot_line{
+    left: 170%;
+    top: 50%;
+    height: 2px;
+    width: 15px;
+    transform: rotate(-45deg);
+}
+nav input:checked ~ .side-nav{
+    transform: translateX(0);
+}
+.signup-register{
+    display: flex;
+    position: absolute;
+    top: 22px;
+    right: 200px;
+}
+.signup-register hr{
+    border: none;
+    border-right: 2px solid #fff;
+    margin: 0 5px;
+    display: none;
+}
+.signup-register a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    padding: 0 10px;
+}
+.signup-register i{
+    padding: 0 7px;
+}
+.signup-register a:hover{
+    opacity: .85;
+}
+.ticket{
+    position: absolute;
+    right: -500px;
+    top: 200px;
+    animation: slideIn 1s ease-out forwards, float 2s ease-in-out infinite;
+}
+.ticket img{
+    width: 500px;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+.ticket img:hover{
+    transform: scale3d(0.8, 0.9, 0.9);
+}
+/*===================================
+          Ticket Animation
+   ===================================*/ 
+@keyframes slideIn {
+    from {
+        right: -500px; 
+        opacity: 0;
+    }
+    to {
+        right: 50px; 
+        opacity: 1;
+    }
+}
+@keyframes float {
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(-10px);}
+    100%{transform: translateY(0px);}
+}
+
+.title{
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    top: 150px;
+    left: 50px;
+}
+pre{
+    font-size: 20px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    top: 250px;
+    left: 50px;
+}
+
+/*===================================
+              Buttons
+   ===================================*/ 
+
+.movies {
+  position: absolute;
+  top: 350px;
+  left: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start; 
+  gap: 10px;
+  padding: 15px 30px;
+  font-size: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  background: #e3000059;
+  color: white;
+  overflow: hidden;
+  width: auto; 
+}
+.movies:hover{
+    background-color: rgba(0, 0, 0, 0.635);
+}
+.icon,
+.text {
+  transition: 0.4s ease;
+}
+.movies:hover .text {
+  transform: translateX(40px);
+  opacity: 0;
+}
+.movies:hover .icon {
+  transform: translateX(50px) rotate(360deg);
+}
+
+.entertainment {
+  position: absolute;
+  top: 350px;
+  left: 250px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start; 
+  gap: 10px;
+  padding: 15px 30px;
+  font-size: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  background: #a95cc079;
+  color: white;
+  overflow: hidden;
+  width: auto; 
+}
+.entertainment:hover{
+    background-color: rgba(0, 0, 0, 0.635);
+}
+.icon,
+.text {
+  transition: 0.4s ease;
+}
+.entertainment:hover .text {
+  transform: translateX(40px);
+  opacity: 0;
+}
+.entertainment:hover .icon {
+  transform: translateX(90px) rotate(360deg);
+}
+
+.sports {
+  position: absolute;
+  top: 350px;
+  left: 530px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start; 
+  gap: 10px;
+  padding: 15px 30px;
+  font-size: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  background: #00ff0059;
+  color: white;
+  overflow: hidden;
+  width: auto; 
+}
+.sports:hover{
+    background-color: rgba(0, 0, 0, 0.635);
+}
+.icon,
+.text {
+  transition: 0.4s ease;
+}
+.sports:hover .text {
+  transform: translateX(40px);
+  opacity: 0;
+}
+.sports:hover .icon {
+  transform: translateX(45px) rotate(360deg);
+}
+
+
+/*===================================
+       Mobile Responsive Styles
+   ===================================*/
+
+@media screen and (max-width: 768px) {
+    body {
+        background-size: cover;
+        background-position: center;
+    }
+    .ticket {
+        position: relative;
+        right: 0;
+        top: 0;
+        margin: 20px auto;
+        width: 90%;
+        max-width: 300px;
+        border-radius: 20px;
+    }
+    
+    .ticket img {
+        width: 100%;
+        height: auto;
+    }
+    
+    @keyframes slideIn {
+        from {
+            right: -100px;
+            opacity: 0;
+        }
+        to {
+            right: 0;
+            opacity: 1;
+        }
+    }
+    
+    .title {
+        position: relative;
+        font-size: 30px;
+        top: 0;
+        left: 0;
+        text-align: center;
+        margin: 20px 0;
+        padding: 0 15px;
+    }
+    
+    pre {
+        position: relative;
+        font-size: 16px;
+        top: 0;
+        left: 0;
+        text-align: center;
+        margin: 10px 0;
+        padding: 0 15px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+    
+    .movies,
+    .entertainment,
+    .sports {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 10px auto;
+        width: 80%;
+        max-width: 250px;
+        display: block;
+        font-size: 20px;
+        text-decoration: none;
+        outline: none;
+    }
+    a {
+    text-decoration: none;
+    }
+    
+    .movies {
+        margin-top: 30px;
+    }
+     .logo-menu{
+        left: 20px;
+    }
+    .signup-register{
+        right: 20px;
+    }
+    .signup-register span{
+        display: none;
+    }
+    .signup-register hr{
+        display: flex;
+    }
+    nav input:checked ~ .logo-menu .toggle .top_line{
+    left: 785%;
+    }
+    nav input:checked ~ .logo-menu .toggle .bot_line{
+    left: 785%;
+    }
+
+
+
+    
+}
