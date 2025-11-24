@@ -1,0 +1,146 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  margin: 50px auto;
+}
+
+h2 {        /*page headline*/
+  text-align: center;
+  margin-bottom: 40px;   /*distance under headline*/
+  font-size: 40px; 
+  color: #aa0303;
+}
+
+.movie-card {
+  display: flex;    /*make img and text next to eachother*/
+  gap: 30px;        /*distance between img and text*/
+  background-color: rgba(255, 255, 255, 0.05);    /*transbarint background*/
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.left-side img {
+  width: 320px;
+  height: 450px;
+  object-fit: cover;     /* img cover all the space*/
+  border-radius: 10px;
+  margin-bottom: 20px;   /*distance under the img*/
+}
+
+.movie-options {
+  display: flex;     /* img cover all the space*/
+  flex-direction: column;   /* stack each option on top of the other */
+  gap: 20px;      /* space between each option */
+}
+
+.movie-options h4 {  /*Date, Time, Number of Tickets*/
+  margin-bottom: 20px; /*space under the text*/
+  color: #aa0303;
+}
+
+.movie-date label,
+.movie-time label {
+  display: inline-block; /* make each option act like a small box */
+  margin-right: 10px;
+  cursor: pointer;      /* pointer on hover */
+}
+
+.movie-date input,
+.movie-time input {
+  display: none;    /* hide input and style span instead */
+}
+
+.movie-date span,
+.movie-time span {
+  background-color: #222;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.movie-date span:hover,
+.movie-time span:hover {
+  background-color: #aa0303;
+}
+
+.movie-date input:checked + span,
+.movie-time input:checked + span {
+  background-color: #aa0303;
+  color: #fff;
+}
+
+.tickets-no input {
+  width: 60px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  text-align: center; /*make no. in the center*/
+}
+
+.book-button button {
+  background-color: #222;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.book-button button:hover {
+  background-color: #aa0303;
+  transform: scale(1.05);
+}
+
+.right-side {
+  flex: 1;     /* take remaining space next to img */
+  font-weight: bold;
+}
+
+.right-side h3 {
+  color: #aa0303;
+  margin-top: 0;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.trailer-btn {
+  display: inline-block; /*act like button*/
+  margin-top: 15px;
+  text-decoration: none;  /*remove underline*/
+  background-color: #222;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.trailer-btn:hover {
+  background-color: #aa0303;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+
+  
+  .movie-time {
+    display: flex;   /*make it under eachother*/
+    flex-direction: column;   
+    gap: 20px; /*gap between each button elements*/
+  }
+
+  .movie-card {
+    flex-direction: column;   /*make the img on top and the text on buttom*/
+  }
+
+}

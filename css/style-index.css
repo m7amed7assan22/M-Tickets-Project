@@ -1,0 +1,153 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container { 
+  width: 90%;
+  margin: 50px auto;
+}
+
+h2 {                  /*page headline*/
+  text-align: center;
+  margin-bottom: 40px;   /*distance under headline*/
+  font-size: 40px;  
+  color: #aa0303;
+}
+
+.movies {
+  display: flex;      
+  flex-direction: column;        /*make every film under each other*/
+  gap: 40px;            /*distance between each card*/
+}
+
+.movies-card {
+  display: flex;           /*make img and text next to eachother*/
+  align-items: flex-start;          /* make the text start from the top of the container*/
+  gap: 20px;         /*distance between img and text*/
+  background-color: rgba(255, 255, 255, 0.05);         /*transbarint background*/
+  border-radius: 15px;
+  padding: 20px;
+  transition: 0.3s ease;
+}
+
+.movies-card img {
+  width: 270px;
+  height: 400px;
+  object-fit: cover;      /* img cover all the space*/
+  border-radius: 10px;
+}
+
+.movies-about {
+  flex: 1;           /*take the remain space next to the img*/
+}
+
+.movies-about h3 {
+  color: #aa0303;
+  margin-top: 0;             /*cancel the space over the headline*/
+}
+
+.movies-about p {
+  line-height: 1.5;         /*make space between lines*/
+  margin: 5px 0;           /*space on top and bottom*/
+}
+
+.movies-button {
+  margin-top: 20px;         /*space on top of the button*/
+}
+
+.movies-button a {
+  text-decoration: none;      /*remove the line under link*/
+  color: #fff;
+  background-color: #aa0303;
+  padding: 10px 18px;
+  border-radius: 25px;
+  margin-right: 10px;      /*distance between buttons*/
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.movies-button a.trailer-btn {
+  background-color: #444;   
+}
+
+.movies-button a:hover {
+  opacity: 0.8;
+}
+
+.movies {
+  position: relative; /* allows hovered card to appear above others using z-index */
+}
+
+.movies:hover .movies-card {
+  filter: blur(6px) brightness(80%); /*make blur on other movies*/
+  transition: 0.3s ease;
+}
+
+.movies-card:hover {
+  filter: none !important; /*reemove the blur on selected movie*/
+  opacity: 1;
+  transform: scale(1.03); /* Makes the card bigger and on top when hovered */
+  z-index: 10;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.4); /*make a red shadow*/
+}
+
+
+
+@media (max-width: 768px) {
+
+  .container {
+    width: 95%;
+    margin-top: 30px;
+  }
+
+  h2 {
+    font-size: 22px;
+    margin-bottom: 25px;     /*dec the space under the headline*/
+  }
+
+  .movies {
+    gap: 20px;         /*dec the space between cards*/
+  }
+
+  .movies-card {
+    flex-direction: column;       /*make the text under the img*/
+    text-align: center;           /*make the text in the center of the screen*/          
+    padding: 15px;
+  }
+
+  .movies-card img {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+  }
+
+  .movies-about {
+    padding: 10px 5px;     /*dec padding around text*/
+  }  
+
+  .movies-about p {
+    font-size: 14px;
+  }
+
+  .movies-button {
+    display: flex;
+    flex-direction: column;      /*make two buttons under eachother*/
+    gap: 10px;        /*space between two buttons*/
+  }
+
+  .movies-button a {
+    margin-right: 0;    /*remove the right space*/
+    width: 100%;        /*make the button take the width of the screen*/
+    text-align: center; /*make the text in the middle of the button*/
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .movies:hover .movies-card {
+    filter: none;                /*stop the blure effect*/
+  }
+}
