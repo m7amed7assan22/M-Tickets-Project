@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M-Tickets - Sign in</title>
+    <link rel="icon" type="image/png" href="../images/icon.png">
+    <link rel="stylesheet" href="../css/nav.style.css">
+    <link rel="stylesheet" href="../css/signin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <div class="logo-menu">
+            <label class="toggle" for="check">
+                <span class="top_line common"></span>
+                <span class="mid_line common"></span>
+                <span class="bot_line common"></span>
+            </label>
+            <a href="../index.html"><img src="../images/icon.png" alt="Logo"></a>
+        </div>
+        <div class="side-nav">
+            <ul>
+                <li><a href="../index.html">home</a></li><hr>
+                <li><a href="stadium.html">stadium locations</a></li><hr>
+                <li><a href="about.html">about m tickets</a></li><hr>
+                <li><a href="contact.html">contact us</a></li>
+            </ul>
+        </div>
+        
+        <div class="signup-register">
+            <a href="register.html"><i class="fa-solid fa-user-plus"></i><span>Register</span></a>
+            <hr>
+            <a href="#"><i class="fa-solid fa-unlock"></i><span>Sign in</span></a>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Sign in to your account</h1>
+        <form id="signup_form" action="../index.html">
+            <div class="form_group">
+                <label class="txt">Email</label>
+                <small class="error" id="err_email"><i class="fa-solid fa-circle-exclamation"></i></small>
+                <input type="email" id="email_address" placeholder="example@example.com" required>
+            </div>
+            <div class="form_group">
+                <label class="txt">Password</label>
+                <small class="error" id="err_pass"><i class="fa-solid fa-circle-exclamation"></i></small>
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <span class="register">Do not have an account? <a href="register.html"><i class="fa-solid fa-user-plus"></i>Register Now!</a></span>
+            <button type="submit" id="submit_btn">Sign in</button>
+        </form>
+</body>
+</html>
