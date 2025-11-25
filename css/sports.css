@@ -1,0 +1,96 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container h1{
+    color: #fff;
+    font-size: 30px;
+    margin-top: 2%;
+    text-align: center;
+}
+nav{
+    background-color: #5EBF5E;
+}
+.match-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #232323;
+    color: #fff;
+    box-shadow: 2px 2px 15px rgba(25, 25, 25, 1);
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    gap: 20px;
+    width: 70%;
+}
+
+.match-card p {
+    font-size: 13px;
+    color: #999;
+}
+
+.teams {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.team-logo {
+    width: 40px;
+    height: 40px;
+}
+
+.team-names{
+    margin-left: 25px;
+}
+
+.team-names h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.info-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    width: 28px;
+    opacity: 0.7;
+}
+
+.info-box strong {
+    font-size: 15px;
+}
+
+
+.book-btn {
+    background: #5EBF5E;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.book-btn:hover {
+    background: #4B994B;
+}
+@media(max-width: 655px) {
+    .match-card{
+        flex-direction: column;
+    }
+    
+}
