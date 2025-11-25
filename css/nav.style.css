@@ -27,7 +27,7 @@
 .side-nav{
     height: 100%;
     width: 290px;
-    position: absolute;
+    position: fixed;
     background-color: #000;
     transition: 0.4s ease;
     transform: translateX(-290px);
@@ -93,6 +93,9 @@ nav input{
     left: 39%;
     transform: translate(-50%,-50%);
 }
+nav input:checked ~ .logo-menu .toggle{
+    position: fixed;
+}
 nav input:checked ~ .logo-menu .toggle .top_line{
     left: 170%;
     top: 50%;
@@ -156,4 +159,5 @@ nav input:checked ~ .side-nav{
     left: 785%;
     }
 }
+
 
